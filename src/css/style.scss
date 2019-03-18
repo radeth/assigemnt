@@ -1,6 +1,6 @@
 @import "./settings";
 @import "./../../node_modules/bootstrap/scss/bootstrap-grid.scss";
-@import url('https://fonts.googleapis.com/css?family=Roboto|ZCOOL+XiaoWei');
+@import url('https://fonts.googleapis.com/css?family=Roboto|PT+Serif');
 
 
 h1,
@@ -8,40 +8,53 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'ZCOOL XiaoWei', serif;
-    font-size: 130%;
+    font-family: 'PT Serif', serif;
 }
 
 p {
-    font-family: 'Roboto'
+    font-family: 'Roboto', sans-serif;
 
 }
-body{
-    min-height: 100vh;
+
+header {
+    a {
+        text-decoration: none;
+    }
 }
+
+.dot {
+    margin-top: -13px;
+    span {
+        height: 26px;
+        width: 26px;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+    }
+}
+
 section {
+    text-align: center;
+
     &:nth-of-type(1) {
-        background-color: aqua;
+        background-color: gray;
+
         .row {
-            text-align: center;
-            .content {
-                box-shadow: 2px 2px 5px grey;
-                background-color: white;
+            &:nth-of-type(1) {
+                color: white;
             }
         }
-
-
     }
-    &:nth-of-type(2) {
-        .row {
-            text-align: center;
-        }
+
+    .content {
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px gray;
+        background-color: white;
     }
-    .icon{
-        width: 40%;
+
+    .icon {
+        margin: 5%;
+        width: 20%;
         height: auto;
     }
-}
-footer{
-    background-color: darkgray;
 }

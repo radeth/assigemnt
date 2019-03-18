@@ -1,12 +1,12 @@
 var path = require("path")
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 module.exports = {
   entry: './src/js/index.js',
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
-    publicPath: "/"
   },
   devServer: {
     filename: 'main.js'
@@ -29,7 +29,8 @@ module.exports = {
         use: [
             process.env.NODE_ENV === 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
             "css-loader",
-            "sass-loader"
+            "sass-loader",
+            "postcss-loader"
         ]
     },
     {

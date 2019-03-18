@@ -1,5 +1,5 @@
-# webpack configuration
+# Front-End assigment
+# setup
+- To run this project, install it locally using `npm install` then use `npm start`
 
-# TODS's
-- bootstap jquery
-- deploy
+I hope u enjoy, in case I was not admitted to the next stage, please send me feedback about my work
