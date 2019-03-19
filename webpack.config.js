@@ -2,6 +2,7 @@ var path = require("path")
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var autoprefixer = require('autoprefixer');
+var webpack = require('webpack')
 module.exports = {
   entry: './src/js/index.js',
   output: {
@@ -63,6 +64,13 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options:{
+        postcss:[
+          autoprefixer()
+        ]
+      }
+    }),
     new MiniCssExtractPlugin({
         filename: "main.css"
     }),
